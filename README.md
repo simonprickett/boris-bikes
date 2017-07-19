@@ -1,5 +1,7 @@
 # boris-bikes
 
+![boris](images/middlefinger.gif)
+
 Quick demo of how to pull basic information about the stations and status of London's "Boris" bike sharing scheme.
 
 This will pull all the bike stations from the API, and produce a list with the following for each station:
