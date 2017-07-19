@@ -15,6 +15,8 @@ const app = {
 	},
 
 	processBikeData: (bikeData) => {
+		let isFirstStation = true;
+		
 		for (let bikeStation of bikeData) {
 			const bikeStationInfo = {};
 			let attrsFound = 0;
@@ -49,11 +51,17 @@ const app = {
 				}
 			} 
 
-			app.displayBikeStation(bikeStationInfo);
+			app.displayBikeStation(bikeStationInfo, isFirstStation);
+			isFirstStation = false;
 		}
 	},
 
-	displayBikeStation: (bikeStationInfo) => {
+	displayBikeStation: (bikeStationInfo, isFirstStation) => {
+		console.log('called with: ' + isFirstStation);
+		if (isFirstStation) {
+			$('#bike-station-list').html('');
+		}
+
 		$('#bike-station-list').append(`<li>${bikeStationInfo.name}, latitude: ${bikeStationInfo.latitude}, longitude: ${bikeStationInfo.longitude}, available bikes: ${bikeStationInfo.numAvailableBikes}, empty docks: ${bikeStationInfo.numEmptyDocks}, total docks: ${bikeStationInfo.numDocks}</li>`);
 	}
 }
