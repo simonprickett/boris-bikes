@@ -13,4 +13,4 @@ This will pull all the bike stations from the API, and produce a list with the f
 * Number of bike docks that are free
 * Total number of bike docks
 
-Try it out yourself [here](http://crudworks.org/borisbikes/).
+Try it out yourself [here](https://simonprickett.github.io/boris-bikes/).
